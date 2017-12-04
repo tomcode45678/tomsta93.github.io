@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
-    <title>Thomas Stapleton  | Welcome to my blog</title>
+    <title>Thomas Stapleton  | React - Ideal Structure</title>
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
 
@@ -21,44 +21,61 @@
     
 
     
-      <link href="https://tomsta93.github.io/index.xml" rel="alternate" type="application/rss+xml" title="Thomas Stapleton" />
-      <link href="https://tomsta93.github.io/index.xml" rel="feed" type="application/rss+xml" title="Thomas Stapleton" />
-    
 
-    <meta property="og:title" content="Welcome to my blog" />
-<meta property="og:description" content="Tech, gaming, traveling &amp; more" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://tomsta93.github.io/" />
-
-
-
-<meta property="og:updated_time" content="2017-11-27T22:21:35&#43;00:00"/>
+    <meta property="og:title" content="React - Ideal Structure" />
+<meta property="og:description" content="From working with React almost daily for nearly two years (from the date of this post) made it is very clear that traditional directory structures do not work well on large projects.
+For example:
+- dist - src - main - webapp - pages - containers - scripts - templates - styles ...  The above example shows clear separation between scripts, templating and styles.
+Traditionally, this makes sense, separating JavaScript from HTML." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://tomsta93.github.io/post/javascript/react/ideal-structure/" />
 
 
 
+<meta property="article:published_time" content="2017-11-27T22:21:35&#43;00:00"/>
 
+<meta property="article:modified_time" content="2017-11-27T22:21:35&#43;00:00"/>
 
 
 
 
 
 
-<meta itemprop="name" content="Welcome to my blog">
-<meta itemprop="description" content="Tech, gaming, traveling &amp; more">
 
-<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Welcome to my blog"/>
-<meta name="twitter:description" content="Tech, gaming, traveling &amp; more"/>
+
+
+
+
+<meta itemprop="name" content="React - Ideal Structure">
+<meta itemprop="description" content="From working with React almost daily for nearly two years (from the date of this post) made it is very clear that traditional directory structures do not work well on large projects.
+For example:
+- dist - src - main - webapp - pages - containers - scripts - templates - styles ...  The above example shows clear separation between scripts, templating and styles.
+Traditionally, this makes sense, separating JavaScript from HTML.">
+
+
+<meta itemprop="datePublished" content="2017-11-27T22:21:35&#43;00:00" />
+<meta itemprop="dateModified" content="2017-11-27T22:21:35&#43;00:00" />
+<meta itemprop="wordCount" content="141">
+
+
+
+<meta itemprop="keywords" content="React,Ideal Structure," />
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="React - Ideal Structure"/>
+<meta name="twitter:description" content="From working with React almost daily for nearly two years (from the date of this post) made it is very clear that traditional directory structures do not work well on large projects.
+For example:
+- dist - src - main - webapp - pages - containers - scripts - templates - styles ...  The above example shows clear separation between scripts, templating and styles.
+Traditionally, this makes sense, separating JavaScript from HTML."/>
 
   </head>
 
   <body class="ma0 avenir bg-near-white">
 
     
+   
+  
 
-  
-  
-  <header class="cover bg-top" style="background-image: url('https://tomsta93.github.io/images/hero-image.jpg');">
-    <div class="bg-black-60">
+  <header>
+    <div class="bg-black">
       <nav class="pv3 ph3 ph4-ns" role="navigation">
   <div class="flex-l justify-between items-center center">
     <a href="https://tomsta93.github.io/" class="f3 fw2 hover-white no-underline white-90 dib">
@@ -101,81 +118,85 @@
   </div>
 </nav>
 
-      <div class="tc-l pv4 pv6-l ph3 ph4-ns">
-        <h1 class="f2 f-subheadline-l fw2 white-90 mb0 lh-title">
-          Welcome to my blog
-        </h1>
-        
-          <h2 class="fw1 f5 f3-l white-80 measure-wide-l center mt3">
-            Tech, gaming, traveling &amp; more
-          </h2>
-        
-      </div>
     </div>
   </header>
 
 
+
     <main class="pb7" role="main">
       
-  <article class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy mid-gray">
-    <p>Some of my work is in progress. I&rsquo;m currently building a strategy game in JavaScript. Why? Why not!</p>
+  <div class="flex-l mt2 mw8 center">
+    <article class="center cf pv5 ph3 ph4-ns mw7">
+      <p class="f6 b helvetica tracked">
+        
+        POST
+      </p>
+      <h1 class="f1 athelas">
+        React - Ideal Structure
+      </h1>
+        
+        
+      <time class="f6 mv4 dib tracked" datetime="2017-11-27T22:21:35Z">
+        November 27, 2017
+      </time>
+      <section class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray">
+        <p>From working with React almost daily for nearly two years <em>(from the date of this post)</em> made it is very clear that traditional directory structures do not work well on large projects.</p>
 
-  </article>
-  
-  
-  
-  
-  
-  
-  
-    
-    
+<p>For example:</p>
 
-    <div class="pa3 pa4-ns w-100 w-70-ns center">
+<pre><code class="language-text">    - dist
+    - src
+      - main
+      - webapp
+        - pages
+        - containers
+        - scripts
+        - templates
+        - styles
+    ...
+</code></pre>
+
+<p>The above example shows clear separation between scripts, templating and styles.</p>
+
+<p>Traditionally, this makes sense, separating JavaScript from HTML.</p>
+
+<p>JSX however, changes this. JavaScript and XML to generate HTML.</p>
+
+<p>The merge of these two technologies makes sense. Why?</p>
+
+<p>Maintainability, speed of development &amp; familiarity.</p>
+
+<p>Searching and editing for one file is faster than two.</p>
+
+<p>Reduces the amount of JavaScript you write, utilising JSX compilation.</p>
+
+<p>Most Front End developers will have used HTML and JavaScript, there is no extra templating language to learn.</p>
+
+<p>JSX utilises what we already know.</p>
+
+      </section>
       
-       
-          <h1 class="flex-none">
-            Recent Articles
-          </h1>
-        
 
+  
+  
+  
+  
+  
+
+
+    </article>
+    <div class="ph3 mt2 mt6-ns">
       
 
-      <section class="w-100 mw8">
-        
-        
-          <div class="relative w-100 mb4">
-            
-<article class="bb b--black-10">
-  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
-    <div class="flex flex-column flex-row-ns">
-      
-      <div class="blah w-100">
-        <h1 class="f3 fw1 athelas mt0 lh-title">
-          <a href="/post/javascript/react/ideal-directory-structure/" class="color-inherit dim link">
-            React - Ideal Directory Structure
-            </a>
-        </h1>
-        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          Personally I find directory structures like the example below are very frustrating when working with any modular front-end. I&rsquo;ve been building React components for little over two years (from the date of this post), in this time I quickly learned traditional directory structures aren&rsquo;t practical when building and maintaining React components.
-For example:
-- dist - src - main - web - pages - containers - scripts - templates - styles - tests .
-        </div>
-          <a href="/post/javascript/react/ideal-directory-structure/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
-        
-      </div>
+
+
+
+
+
+
+
     </div>
   </div>
-</article>
-
-          </div>
-        
-      </section>
-
-      
-
-      </div>
-  
 
     </main>
     <footer class="bg-near-black bottom-0 w-100 pa3" role="contentinfo">

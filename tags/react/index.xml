@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Welcome to my blog on Thomas Stapleton</title>
-    <link>https://tomsta93.github.io/</link>
-    <description>Recent content in Welcome to my blog on Thomas Stapleton</description>
+    <title>React on Thomas Stapleton</title>
+    <link>https://tomsta93.github.io/tags/react/</link>
+    <description>Recent content in React on Thomas Stapleton</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 27 Nov 2017 22:21:35 +0000</lastBuildDate>
     
-	<atom:link href="https://tomsta93.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://tomsta93.github.io/tags/react/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -20,16 +20,6 @@
       <description>Personally I find directory structures like the example below are very frustrating when working with any modular front-end. I&amp;rsquo;ve been building React components for little over two years (from the date of this post), in this time I quickly learned traditional directory structures aren&amp;rsquo;t practical when building and maintaining React components.
 For example:
 - dist - src - main - web - pages - containers - scripts - templates - styles - tests .</description>
-    </item>
-    
-    <item>
-      <title>Contact</title>
-      <link>https://tomsta93.github.io/contact/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://tomsta93.github.io/contact/</guid>
-      <description>Feel free to drop me a message, or follow me on twitter.
-Your Name Email Address An email address is required.  Message   </description>
     </item>
     
   </channel>

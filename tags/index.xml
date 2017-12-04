@@ -1,14 +1,33 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on Stuff, things &amp; more</title>
+    <title>Tags on Thomas Stapleton</title>
     <link>https://tomsta93.github.io/tags/</link>
-    <description>Recent content in Tags on Stuff, things &amp; more</description>
+    <description>Recent content in Tags on Thomas Stapleton</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Mon, 27 Nov 2017 22:21:35 +0000</lastBuildDate>
     
 	<atom:link href="https://tomsta93.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Ideal Directory Structure</title>
+      <link>https://tomsta93.github.io/tags/ideal-directory-structure/</link>
+      <pubDate>Mon, 27 Nov 2017 22:21:35 +0000</pubDate>
+      
+      <guid>https://tomsta93.github.io/tags/ideal-directory-structure/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>React</title>
+      <link>https://tomsta93.github.io/tags/react/</link>
+      <pubDate>Mon, 27 Nov 2017 22:21:35 +0000</pubDate>
+      
+      <guid>https://tomsta93.github.io/tags/react/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>

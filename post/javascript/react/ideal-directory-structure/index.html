@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Thomas Stapleton  | React - Ideal Directory Structure</title>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="generator" content="Hugo 0.31" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    <link href='https://tomsta93.github.io/dist/main.css' rel='stylesheet' type="text/css" />
+    
+      
+    
+
+    
+
+    <meta property="og:title" content="React - Ideal Directory Structure" />
+<meta property="og:description" content="Personally I find directory structures like the example below are very frustrating when working with any modular front-end. I&rsquo;ve been building React components for little over two years (from the date of this post), in this time I quickly learned traditional directory structures aren&rsquo;t practical when building and maintaining React components.
+For example:
+- dist - src - main - web - pages - containers - scripts - templates - styles - tests ." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://tomsta93.github.io/post/javascript/react/ideal-directory-structure/" />
+
+
+
+<meta property="article:published_time" content="2017-11-27T22:21:35&#43;00:00"/>
+
+<meta property="article:modified_time" content="2017-11-27T22:21:35&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="React - Ideal Directory Structure">
+<meta itemprop="description" content="Personally I find directory structures like the example below are very frustrating when working with any modular front-end. I&rsquo;ve been building React components for little over two years (from the date of this post), in this time I quickly learned traditional directory structures aren&rsquo;t practical when building and maintaining React components.
+For example:
+- dist - src - main - web - pages - containers - scripts - templates - styles - tests .">
+
+
+<meta itemprop="datePublished" content="2017-11-27T22:21:35&#43;00:00" />
+<meta itemprop="dateModified" content="2017-11-27T22:21:35&#43;00:00" />
+<meta itemprop="wordCount" content="1346">
+
+
+
+<meta itemprop="keywords" content="React,Ideal Directory Structure," />
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="React - Ideal Directory Structure"/>
+<meta name="twitter:description" content="Personally I find directory structures like the example below are very frustrating when working with any modular front-end. I&rsquo;ve been building React components for little over two years (from the date of this post), in this time I quickly learned traditional directory structures aren&rsquo;t practical when building and maintaining React components.
+For example:
+- dist - src - main - web - pages - containers - scripts - templates - styles - tests ."/>
+
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="https://tomsta93.github.io/" class="f3 fw2 hover-white no-underline white-90 dib">
+      Thomas Stapleton
+    </a>
+    <div class="flex-l items-center">
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/contact/" title="Contact page">
+              Contact
+            </a>
+          </li>
+          
+        </ul>
+      
+      
+
+
+
+  <a href="https://twitter.com/tomsta93" class="link-transition twitter link dib z-999 pt3 pt0-l mr2" title="Twitter link">
+    <svg height="32px"  style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M37.167,22.283c-2.619,0.953-4.274,3.411-4.086,6.101  l0.063,1.038l-1.048-0.127c-3.813-0.487-7.145-2.139-9.974-4.915l-1.383-1.377l-0.356,1.017c-0.754,2.267-0.272,4.661,1.299,6.271  c0.838,0.89,0.649,1.017-0.796,0.487c-0.503-0.169-0.943-0.296-0.985-0.233c-0.146,0.149,0.356,2.076,0.754,2.839  c0.545,1.06,1.655,2.097,2.871,2.712l1.027,0.487l-1.215,0.021c-1.173,0-1.215,0.021-1.089,0.467  c0.419,1.377,2.074,2.839,3.918,3.475l1.299,0.444l-1.131,0.678c-1.676,0.976-3.646,1.526-5.616,1.568  C19.775,43.256,19,43.341,19,43.405c0,0.211,2.557,1.397,4.044,1.864c4.463,1.377,9.765,0.783,13.746-1.568  c2.829-1.673,5.657-5,6.978-8.221c0.713-1.716,1.425-4.851,1.425-6.354c0-0.975,0.063-1.102,1.236-2.267  c0.692-0.678,1.341-1.419,1.467-1.631c0.21-0.403,0.188-0.403-0.88-0.043c-1.781,0.636-2.033,0.551-1.152-0.402  c0.649-0.678,1.425-1.907,1.425-2.267c0-0.063-0.314,0.042-0.671,0.233c-0.377,0.212-1.215,0.53-1.844,0.72l-1.131,0.361l-1.027-0.7  c-0.566-0.381-1.361-0.805-1.781-0.932C39.766,21.902,38.131,21.944,37.167,22.283z M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4  s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/></svg>
+
+  </a>
+
+
+
+
+
+  <a href="https://github.com/tomsta93" class="link-transition github link dib z-999 pt3 pt0-l mr2" title="Github link">
+    <svg  height="32px"  style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+  <path d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"/>
+</svg>
+
+  </a>
+
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  <div class="flex-l mt2 mw8 center">
+    <article class="center cf pv5 ph3 ph4-ns mw7">
+      <p class="f6 b helvetica tracked">
+        
+        POST
+      </p>
+      <h1 class="f1 athelas">
+        React - Ideal Directory Structure
+      </h1>
+        
+        
+      <time class="f6 mv4 dib tracked" datetime="2017-11-27T22:21:35Z">
+        November 27, 2017
+      </time>
+      <section class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray">
+        <p>Personally I find directory structures like the example below are very frustrating when working with any modular front-end. I&rsquo;ve been building React components for little over two years <em>(from the date of this post)</em>, in this time I quickly learned traditional directory structures aren&rsquo;t practical when building and maintaining React components.</p>
+
+<p>For example:</p>
+
+<pre><code class="language-text">    - dist
+    - src
+      - main
+          - web
+            - pages
+            - containers
+            - scripts
+            - templates
+            - styles
+            - tests
+    ...
+</code></pre>
+
+<p>The above example shows clear separation between scripts, templating and styles. Traditionally, this makes sense, separating JavaScript from HTML. JSX however, changes this. JavaScript and XML to generate HTML. The merge of these two technologies makes sense.</p>
+
+<p>Why?</p>
+
+<p>Maintainability, speed of development &amp; familiarity. Searching and editing for one file is faster than two. Reducing the amount of JavaScript you write, utilising JSX compilation instead of creating DOM nodes via Document API&rsquo;s.</p>
+
+<p>All Front End developers will have used HTML and JavaScript, there is no extra templating language to learn.</p>
+
+<p>To summaries, JSX utilises what we already know.</p>
+
+<p>At this point renaming the template folder to &lsquo;components&rsquo; makes sense, after all we&rsquo;re building components.</p>
+
+<p>What is a component?</p>
+
+<p>A component is modular piece of code. We can argue our scripts folder is actually a directory full of components.</p>
+
+<p>Combining our theoretical scripts and templates directory we end up with this:</p>
+
+<pre><code class="language-text">    ...
+        - pages
+        - containers
+        - components
+            call-to-action.js
+            lazy-load-images.js
+            ...
+        - styles
+        - tests
+</code></pre>
+
+<p>All these newly merged files may conflict or bloat our components directory.</p>
+
+<p>Creating a directory per component pay seem overkill when in fact it makes logical sense.</p>
+
+<p>We&rsquo;re building components, components are a modular piece of code, web components may require CSS for styling.</p>
+
+<p>Utilising <a href="http://getbem.com/">BEM</a> we can directly link a &ldquo;block&rdquo; to a component name e.g. call-to-action and an &ldquo;element&rdquo; to the icon in the call to action. So our class names would be <code>.call-to-action</code> and <code>.call-to-action__icon</code>.</p>
+
+<p>Moving the styles for our components into the relevant component directories replaces the need for a styles folder, all our SCSS partials are directly next to the <code>.js</code> or <code>jsx</code> file that requires it.</p>
+
+<p>Core utilities may be still exist in our styles directory but &ldquo;styles&rdquo; is a generic term that doesn&rsquo;t fit to the utility files that remain, this could be renamed to &ldquo;utils&rdquo;, again this is generic so we could specify the type of utility.</p>
+
+<p>We could be using a <a href="https://cssreset.com/scripts/eric-meyer-reset-css/">CSS reset</a> utility called <code>_reset.scss</code> this would live within <code>utils</code> but then reside within a directory called &ldquo;reset&rdquo;. This is consistent with our component directory structure as may have some JavaScript that could also live in this utility folder.</p>
+
+<p>What we end up with is something like:</p>
+
+<pre><code class="language-text">    ...
+        - pages
+        - containers
+        - components
+            - call-to-action
+                call-to-action.js
+                _call-to-action.scss
+            ...
+        - utils
+            - reset
+                - _reset.scss
+                - reset.js (Update local storage values if removed or value type changed)
+        - tests
+</code></pre>
+
+<p>So far we have an updated directory structure making it easier to search for a component and quickly find the file you need to modify&hellip; no longer do you have to conduct obscure searching for a class name in the styles directory or class name in the templates file. They&rsquo;re sitting next to one another!</p>
+
+<p>Now, you need to update your unit tests&hellip; you&rsquo;re probably ahead of me on this one.</p>
+
+<p>So we&rsquo;ll move the test files into the representative component directory.</p>
+
+<p>Again, just as the styles directory contained generic utility files, we might have test utilities. We can always move these into a &ldquo;test&rdquo; directory within the &ldquo;utils&rdquo; folder.</p>
+
+<p>From these changes we get:</p>
+
+<pre><code class="language-text">    ...
+        - pages
+        - containers
+        - components
+            - call-to-action
+                call-to-action.js
+                call-to-action.test.js
+                _call-to-action.scss
+            ...
+        - utils
+            - test
+                - mock-ajax.js
+                - mock-browser-storage.js
+            - reset
+                ...
+            ...
+</code></pre>
+
+<p>General tidy up can be something as basic as moving your directories to a higher level.</p>
+
+<p>Take our current example:</p>
+
+<pre><code class="language-text">    - dist
+    - src
+      - main
+          - web
+          ...
+</code></pre>
+
+<p>If you&rsquo;re using a node project you could easily have every directory within &ldquo;web&rdquo; at the root of &ldquo;src&rdquo;:</p>
+
+<pre><code class="language-text">    - dist
+    - src
+        - components
+        ...
+</code></pre>
+
+<p>If you&rsquo;re using <a href="https://github.com/spring-projects/spring-boot/tree/master/spring-boot-samples/spring-boot-sample-web-static">Spring Boot</a> and you don&rsquo;t have in-depth knowledge on configuring directory structures talk to a back-end developer and discuss the practicality and benefits of moving web specific files to a root directory. It might make sense to retain the example below:</p>
+
+<pre><code class="language-text">    - dist
+    - src
+      - main
+          - web
+          ...
+</code></pre>
+
+<p>Reasons for change:</p>
+
+<ul>
+<li>Cleaner directory structure</li>
+<li>Shared responsibility between front end and back end workspaces</li>
+<li>Logical step when using components for isomorphic (server side) rendering</li>
+<li>Promotes the evolution to a web micro service that only renders pages, thus supporting a larger micro service architecture</li>
+</ul>
+
+<p>Components -&gt; Patterns -&gt; Pages</p>
+
+<p>What is the difference between a component and a pattern?</p>
+
+<blockquote>
+<p>&ldquo;Components are an interface chunk to be added to an overall layout. whereas patterns may be UI or a variety of other things, like a behavior, flow, application motif or something else.&rdquo; <a href="https://medium.com/eightshapes-llc/patterns-components-2ce778cbe4e8">Nathan Curtis - 2017</a></p>
+</blockquote>
+
+<p>Component are a singular piece of functionality that can be imported to improve functionality, UX or design. A pattern would be made up of multiple components e.g. a product card that would include an offer, image, short description, price and call to action component.</p>
+
+<p>Multiple patterns would then make up a page. You can think of this as a one-to-many relationship between components, patterns and pages.</p>
+
+<p>Renaming our &ldquo;containers&rdquo; directory to &ldquo;patterns&rdquo; outlines the intent of the React components within this working directory. Just like our components directory we can include our React template, tests and styles.</p>
+
+<p>Shared state libraries like <a href="https://redux.js.org/docs/introduction/">Redux</a> and <a href="https://mobx.js.org/">MobX</a> recommend you create separate files to help manage your applications state. Patterns will most likely have shared state because they contain multiple components, any one of these components may trigger an update to the state based on an event such as a click or keypress.</p>
+
+<p>Why shared state?</p>
+
+<p>Using an e-commerce page with a list of products as an example, containing a facets &amp; filters pattern, a product list and page controls pattern (containing sort-by and paginator components).</p>
+
+<p>All patterns and sub components may need the filtered set of products and information, Redux and MobX allow you to do this without hacking scope references into React components resulting in JavaScript class reference spaghetti. More importantly, the patterns remain modular, they are not tied together and can receive the filtered products and information through <code>props</code>.</p>
+
+<p>The list page example outlines an important point, patterns can import patterns. Be careful, you do not want a complex chain of imports that make it frustrating to maintain.</p>
+
+<p>Aim to apply no more than two nested patterns, this will ultimately be determined through the complexity of the design and level of reuse you discover though comparing different types of pages.</p>
+
+<p>Our patterns directory including Redux files:</p>
+
+<pre><code class="language-text">    ...
+        - components
+            ...
+        - pages
+        - patterns
+            - article
+                article.js
+                article.test.js
+                article.action-creator.js
+                article.action-creator.test.js
+                article.reducer.js
+                article.reducer.test.js
+                _article.scss
+        - utils
+            - test
+            - reset
+            - store
+                - store.js
+            ...
+</code></pre>
+
+<p>Pages could also include shared store files, used to pass shared state between patterns. Pages would also include tests. You would not expect to see every page with a SCSS partial. The styling of the page has already been determined through the component and pattern styles already included. Sometimes you might require styling for a page, this could be as simple as applying different <code>line-height</code> or <code>margin</code> values.</p>
+
+<p>Below is my ideal directory structure for using React, or for that matter any component framework custom or third-party.</p>
+
+<p>Updated directory structure:</p>
+
+<pre><code class="language-text">    - dist
+    - src
+        - components
+            - call-to-action
+                call-to-action.js
+                call-to-action.test.js
+                _call-to-action.scss
+        - pages
+            - homepage
+                homepage.js
+                homepage.test.js
+            - content
+                content.js
+                content.test.js
+                _content.scss
+        - patterns
+            - article
+                article.js
+                article.test.js
+                article.action-creator.js
+                article.action-creator.test.js
+                article.reducer.js
+                article.reducer.test.js
+                _article.scss
+        - utils
+            - test
+                - mock-ajax.js
+                - mock-browser-storage.js
+            - reset
+                - _reset.scss
+            - third-party
+                - redux
+                    - redux.min.js
+                - react
+                    - react.development.min.js
+                    - react-dom.development.min.js
+                    - react.production.min.js
+                    - react-dom.production.min.js
+            - store
+                - store.js
+                ...
+            ...
+</code></pre>
+
+<p>If you notice your components directory or any other becoming overwhelming you could separate these. Create different repositories for components, patterns and pages including them as npm modules or, as a Git submodules.</p>
+
+<p>Thanks for reading.</p>
+
+      </section>
+      
+
+  
+  
+  
+  
+  
+
+
+    </article>
+    <div class="ph3 mt2 mt6-ns">
+      
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+
+    </main>
+    <footer class="bg-near-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://tomsta93.github.io/" >
+    &copy; 2017 Thomas Stapleton
+  </a>
+  
+
+
+
+  <a href="https://twitter.com/tomsta93" class="link-transition twitter link dib z-999 pt3 pt0-l mr2" title="Twitter link">
+    <svg height="32px"  style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M37.167,22.283c-2.619,0.953-4.274,3.411-4.086,6.101  l0.063,1.038l-1.048-0.127c-3.813-0.487-7.145-2.139-9.974-4.915l-1.383-1.377l-0.356,1.017c-0.754,2.267-0.272,4.661,1.299,6.271  c0.838,0.89,0.649,1.017-0.796,0.487c-0.503-0.169-0.943-0.296-0.985-0.233c-0.146,0.149,0.356,2.076,0.754,2.839  c0.545,1.06,1.655,2.097,2.871,2.712l1.027,0.487l-1.215,0.021c-1.173,0-1.215,0.021-1.089,0.467  c0.419,1.377,2.074,2.839,3.918,3.475l1.299,0.444l-1.131,0.678c-1.676,0.976-3.646,1.526-5.616,1.568  C19.775,43.256,19,43.341,19,43.405c0,0.211,2.557,1.397,4.044,1.864c4.463,1.377,9.765,0.783,13.746-1.568  c2.829-1.673,5.657-5,6.978-8.221c0.713-1.716,1.425-4.851,1.425-6.354c0-0.975,0.063-1.102,1.236-2.267  c0.692-0.678,1.341-1.419,1.467-1.631c0.21-0.403,0.188-0.403-0.88-0.043c-1.781,0.636-2.033,0.551-1.152-0.402  c0.649-0.678,1.425-1.907,1.425-2.267c0-0.063-0.314,0.042-0.671,0.233c-0.377,0.212-1.215,0.53-1.844,0.72l-1.131,0.361l-1.027-0.7  c-0.566-0.381-1.361-0.805-1.781-0.932C39.766,21.902,38.131,21.944,37.167,22.283z M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4  s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/></svg>
+
+  </a>
+
+
+
+
+
+  <a href="https://github.com/tomsta93" class="link-transition github link dib z-999 pt3 pt0-l mr2" title="Github link">
+    <svg  height="32px"  style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+  <path d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"/>
+</svg>
+
+  </a>
+
+
+  </div>
+</footer>
+
+    <script src="https://tomsta93.github.io/dist/app.bundle.js" async></script>
+
+  </body>
+</html>

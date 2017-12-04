@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ideal Structure on Thomas Stapleton</title>
+    <link>https://tomsta93.github.io/tags/ideal-structure/</link>
+    <description>Recent content in Ideal Structure on Thomas Stapleton</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 27 Nov 2017 22:21:35 +0000</lastBuildDate>
+    
+	<atom:link href="https://tomsta93.github.io/tags/ideal-structure/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>React - Ideal Structure</title>
+      <link>https://tomsta93.github.io/post/javascript/react/ideal-structure/</link>
+      <pubDate>Mon, 27 Nov 2017 22:21:35 +0000</pubDate>
+      
+      <guid>https://tomsta93.github.io/post/javascript/react/ideal-structure/</guid>
+      <description>From working with React almost daily for nearly two years (from the date of this post) made it is very clear that traditional directory structures do not work well on large projects.
+For example:
+- dist - src - main - webapp - pages - containers - scripts - templates - styles ...  The above example shows clear separation between scripts, templating and styles.
+Traditionally, this makes sense, separating JavaScript from HTML.</description>
+    </item>
+    
+  </channel>
+</rss>
