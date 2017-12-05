@@ -23,7 +23,7 @@
     
 
     <meta property="og:title" content="React - Ideal Directory Structure" />
-<meta property="og:description" content="Personally I find directory structures like the example below are very frustrating when working with any modular front-end. I&rsquo;ve been building React components for little over two years (from the date of this post), in this time I quickly learned traditional directory structures aren&rsquo;t practical when building and maintaining React components.
+<meta property="og:description" content="Personally I find directory structures like the example below very frustrating when working with or working towards any modular front-end. Building React components for little over two years (from the date of this post) emphasises we need to evolve this structure into something practical when building/maintaining React components.
 For example:
 - dist - src - main - web - pages - containers - scripts - templates - styles - tests ." />
 <meta property="og:type" content="article" />
@@ -46,20 +46,20 @@ For example:
 
 
 <meta itemprop="name" content="React - Ideal Directory Structure">
-<meta itemprop="description" content="Personally I find directory structures like the example below are very frustrating when working with any modular front-end. I&rsquo;ve been building React components for little over two years (from the date of this post), in this time I quickly learned traditional directory structures aren&rsquo;t practical when building and maintaining React components.
+<meta itemprop="description" content="Personally I find directory structures like the example below very frustrating when working with or working towards any modular front-end. Building React components for little over two years (from the date of this post) emphasises we need to evolve this structure into something practical when building/maintaining React components.
 For example:
 - dist - src - main - web - pages - containers - scripts - templates - styles - tests .">
 
 
 <meta itemprop="datePublished" content="2017-11-27T22:21:35&#43;00:00" />
 <meta itemprop="dateModified" content="2017-11-27T22:21:35&#43;00:00" />
-<meta itemprop="wordCount" content="1355">
+<meta itemprop="wordCount" content="1431">
 
 
 
 <meta itemprop="keywords" content="React,Ideal Directory Structure," />
 <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="React - Ideal Directory Structure"/>
-<meta name="twitter:description" content="Personally I find directory structures like the example below are very frustrating when working with any modular front-end. I&rsquo;ve been building React components for little over two years (from the date of this post), in this time I quickly learned traditional directory structures aren&rsquo;t practical when building and maintaining React components.
+<meta name="twitter:description" content="Personally I find directory structures like the example below very frustrating when working with or working towards any modular front-end. Building React components for little over two years (from the date of this post) emphasises we need to evolve this structure into something practical when building/maintaining React components.
 For example:
 - dist - src - main - web - pages - containers - scripts - templates - styles - tests ."/>
 
@@ -139,7 +139,7 @@ For example:
         November 27, 2017
       </time>
       <section class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray">
-        <p>Personally I find directory structures like the example below are very frustrating when working with any modular front-end. I&rsquo;ve been building React components for little over two years <em>(from the date of this post)</em>, in this time I quickly learned traditional directory structures aren&rsquo;t practical when building and maintaining React components.</p>
+        <p>Personally I find directory structures like the example below very frustrating when working with or working towards any modular front-end. Building React components for little over two years <em>(from the date of this post)</em> emphasises we need to evolve this structure into something practical when building/maintaining React components.</p>
 
 <p>For example:</p>
 
@@ -156,21 +156,23 @@ For example:
     ...
 </code></pre>
 
-<p>The above example shows clear separation between scripts, templating and styles. Traditionally, this makes sense, separating JavaScript from HTML. JSX changes this, JavaScript and XML syntax to ultimately generate DOM nodes. The utilisation of JSX to build web components makes sense.</p>
+<p>The above example shows a clear divide between client side functionality, templating and styles. Traditionally, this makes sense, separating file types to maintain clean code and a clean codebase. The introduction of JSX and components break this, JavaScript and XML syntax to create template files.</p>
+
+<p>At first glance a JSX may look alien, even contradictory, merging JavaScript and templating together. After a short time you probably wonder what you did without it. This is because the utilisation of JSX syntax to build web components makes sense.</p>
 
 <p>Why?</p>
 
-<p>Maintainability, speed of development &amp; familiarity. Searching and editing for one file is faster than two. Reducing the amount of JavaScript you write, utilising JSX compilation instead of creating DOM nodes via Document API&rsquo;s.</p>
+<p>Maintainability, speed of development &amp; familiarity. Searching and editing for one file is faster than two. JSX files are much smaller and readable than the native JavaScript equivalent.</p>
 
-<p>All Front End developers will have used HTML and JavaScript, there is no extra templating language to learn.</p>
+<p>Additionally, all Front End developers will have experience with HTML and JavaScript, meaning there is no extra templating syntax to learn.</p>
 
 <p>To summaries, JSX utilises what we already know and our familiar with.</p>
 
-<p>At this point renaming the template folder to &lsquo;components&rsquo; also makes sense, after all we&rsquo;re building components.</p>
+<p>At this point, renaming the template folder to &ldquo;components&rdquo; makes sense, after all we&rsquo;re building components.</p>
 
-<p>What is a component?</p>
+<p>But what exactly is a component?</p>
 
-<p>A component is modular piece of code. We can argue our scripts folder is actually a directory full of components.</p>
+<p>To me, a component is modular piece of code. Therefore, I would argue our scripts folder is actually a directory full of functional components.</p>
 
 <p>Combining our theoretical scripts and templates directory we end up with this:</p>
 
@@ -187,7 +189,7 @@ For example:
 
 <p>All these newly merged files may conflict or bloat our components directory.</p>
 
-<p>Creating a directory per component pay seem overkill when in fact it makes logical sense.</p>
+<p>Creating a directory per component may seem like overkill, when in fact it makes logical sense.</p>
 
 <p>We&rsquo;re building components, components are a modular piece of code, web components may require CSS for styling.</p>
 
@@ -195,7 +197,21 @@ For example:
 
 <p>Moving the styles for our components into the relevant component directories replaces the need for a styles folder, all our SCSS partials are directly next to the <code>.js</code> or <code>jsx</code> file that requires it.</p>
 
-<p>Core utilities may be still exist in our styles directory but &ldquo;styles&rdquo; is a generic term that doesn&rsquo;t fit to the utility files that remain, this could be renamed to &ldquo;utils&rdquo;, again this is generic so we could specify the type of utility.</p>
+<p>A component as a directory is a natural step to take:</p>
+
+<pre><code class="language-text">    ...
+        - pages
+        - containers
+        - components
+            - call-to-action
+                call-to-action.js
+                _call-to-action.scss
+            ...
+        - tests
+        - styles
+</code></pre>
+
+<p>Core utilities may be still exist in our styles directory but &ldquo;styles&rdquo; is a generic term that doesn&rsquo;t best describe the utility files that remain, this could be renamed to &ldquo;utils&rdquo;, again this is generic so we could specify the type of utility.</p>
 
 <p>We could be using a <a href="https://cssreset.com/scripts/eric-meyer-reset-css/">CSS reset</a> utility called <code>_reset.scss</code> this would live within <code>utils</code> but then reside within a directory called &ldquo;reset&rdquo;. This is consistent with our component directory structure as may have some JavaScript that could also live in this utility folder.</p>
 
@@ -216,9 +232,9 @@ For example:
         - tests
 </code></pre>
 
-<p>So far we have an updated directory structure making it easier to search for a component and quickly find the file you need to modify&hellip; no longer do you have to conduct obscure searching for a class name in the styles directory or class name in the templates file. They&rsquo;re sitting next to one another!</p>
+<p>So far we have an updated directory structure making it easier to search for a component and quickly find the file you need to modify. You remove the time taken up conducting searches or reading through obscure class or file names in different directories. The files are sitting next to one another!</p>
 
-<p>Now, you need to update your unit tests&hellip; you&rsquo;re probably ahead of me on this one.</p>
+<p>Now, we need to update our unit tests&hellip; you&rsquo;re probably ahead of me on this one.</p>
 
 <p>So we&rsquo;ll move the test files into the representative component directory.</p>
 
@@ -244,7 +260,7 @@ For example:
             ...
 </code></pre>
 
-<p>General tidy up can be something as basic as moving your directories to a higher level.</p>
+<p>General tidy up can be something as basic as moving your directories up a level.</p>
 
 <p>Take our current example:</p>
 
@@ -276,9 +292,9 @@ For example:
 
 <ul>
 <li>Cleaner directory structure</li>
-<li>Shared responsibility between front end and back end workspaces</li>
-<li>Logical step when using components for isomorphic (server side) rendering</li>
-<li>Promotes the evolution to a web micro service that only renders pages, thus supporting a larger micro service architecture</li>
+<li>Shared responsibility between front-end and back-end workspaces (less segregated)</li>
+<li>A logical step when promoting reuse of components for isomorphic rendering</li>
+<li>Promotes the evolution to a front end rendering service, supporting a micro service architecture</li>
 </ul>
 
 <p>Components -&gt; Patterns -&gt; Pages</p>
@@ -293,9 +309,9 @@ For example:
 
 <p>Multiple patterns would then make up a page. You can think of this as a one-to-many relationship between components, patterns and pages.</p>
 
-<p>Renaming our &ldquo;containers&rdquo; directory to &ldquo;patterns&rdquo; outlines the intent of the React components within this working directory. Just like our components directory we can include our React template, tests and styles.</p>
+<p>Renaming our &ldquo;containers&rdquo; directory to &ldquo;patterns&rdquo; outlines the intent of the React components within this directory. Just like our components directory, we can include our React template, tests and styles in the same folder.</p>
 
-<p>Shared state libraries like <a href="https://redux.js.org/docs/introduction/">Redux</a> and <a href="https://mobx.js.org/">MobX</a> recommend you create separate files to help manage your applications state. Patterns will most likely have shared state because they contain multiple components, any one of these components may trigger an update to the state based on an event such as a click or keypress.</p>
+<p>Shared state libraries like <a href="https://redux.js.org/docs/introduction/">Redux</a> and <a href="https://mobx.js.org/">MobX</a> recommend you create separate types of files to help manage your applications state. Patterns will most likely have shared state because they contain multiple components, any one of these components may trigger an update to the state based on an event such as a click or keypress.</p>
 
 <p>Why shared state?</p>
 
@@ -303,11 +319,11 @@ For example:
 
 <p>All patterns and sub components may need the filtered set of products and information, Redux and MobX allow you to do this without hacking scope references into React components resulting in JavaScript class reference spaghetti. More importantly, the patterns remain modular, they are not tied together and can receive the filtered products and information through <code>props</code>.</p>
 
-<p>The list page example outlines an important point, patterns can import patterns. Be careful, you do not want a complex chain of imports that make it frustrating to maintain.</p>
+<p>The list page example outlines an important point, patterns can import patterns. Be careful, you do not want a complex chain of imports that make it frustrating to maintain or remove.</p>
 
 <p>Aim to apply no more than two nested patterns, this will ultimately be determined through the complexity of the design and level of reuse you discover though comparing different types of pages.</p>
 
-<p>Our patterns directory including Redux files:</p>
+<p>Our patterns directory including Redux file types:</p>
 
 <pre><code class="language-text">    ...
         - components
@@ -330,9 +346,9 @@ For example:
             ...
 </code></pre>
 
-<p>Pages could also include shared store files, used to pass shared state between patterns. Pages would also include tests. You would not expect to see every page with a SCSS partial. The styling of the page has already been determined through the component and pattern styles already included. Sometimes you might require styling for a page, this could be as simple as applying different <code>line-height</code> or <code>margin</code> values.</p>
+<p>Pages can also include shared store files, used to pass shared state between patterns. Pages would also include tests. You would not expect to see every page with a SCSS partial. The styling of the page has already been determined through the use of styled components and patterns. Sometimes you might require styling for a page, this could be as simple as applying different <code>line-height</code> or <code>margin</code> values.</p>
 
-<p>Below is my ideal directory structure for using React, or for that matter any component framework custom or third-party.</p>
+<p>Below is my ideal directory structure for using React, or for that matter any component framework, custom or third-party.</p>
 
 <p>Updated directory structure:</p>
 
@@ -380,7 +396,7 @@ For example:
             ...
 </code></pre>
 
-<p>If you notice your components directory or any other becoming overwhelming you could separate these. Create different repositories for components, patterns and pages including them as npm modules or, as a Git submodules.</p>
+<p>If you notice your components directory or any other becoming overwhelming you can separate these. One technique would involve creating different repositories for components, patterns and pages including them as npm modules or, as a Git submodules.</p>
 
 <p>Thanks for reading.</p>
 

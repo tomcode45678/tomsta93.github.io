@@ -17,7 +17,7 @@
       <pubDate>Mon, 27 Nov 2017 22:21:35 +0000</pubDate>
       
       <guid>https://tomsta93.github.io/post/javascript/react/ideal-directory-structure/</guid>
-      <description>Personally I find directory structures like the example below are very frustrating when working with any modular front-end. I&amp;rsquo;ve been building React components for little over two years (from the date of this post), in this time I quickly learned traditional directory structures aren&amp;rsquo;t practical when building and maintaining React components.
+      <description>Personally I find directory structures like the example below very frustrating when working with or working towards any modular front-end. Building React components for little over two years (from the date of this post) emphasises we need to evolve this structure into something practical when building/maintaining React components.
 For example:
 - dist - src - main - web - pages - containers - scripts - templates - styles - tests .</description>
     </item>
