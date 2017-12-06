@@ -23,9 +23,9 @@
     
 
     <meta property="og:title" content="React - Ideal Directory Structure" />
-<meta property="og:description" content="Personally I find directory structures like the example below very frustrating when working with or working towards any modular front-end. Building React components for little over two years (from the date of this post) emphasises we need to evolve this structure into something practical when building/maintaining React components.
+<meta property="og:description" content="Directory structures like the example below are very frustrating when working with/towards any modular front-end codebase. I&rsquo;ve been creating React components for little over two years (from the date of this post), in this time I&rsquo;m adamant we need to evolve this structure.
 For example:
-- dist - src - main - web - pages - containers - scripts - templates - styles - tests ." />
+- dist - src - main - web - pages - containers - scripts - templates - styles - tests ...  What this achieves is a clear divide between client side functionality, templating and styles." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://tomsta93.github.io/post/javascript/react/ideal-directory-structure/" />
 
@@ -46,22 +46,22 @@ For example:
 
 
 <meta itemprop="name" content="React - Ideal Directory Structure">
-<meta itemprop="description" content="Personally I find directory structures like the example below very frustrating when working with or working towards any modular front-end. Building React components for little over two years (from the date of this post) emphasises we need to evolve this structure into something practical when building/maintaining React components.
+<meta itemprop="description" content="Directory structures like the example below are very frustrating when working with/towards any modular front-end codebase. I&rsquo;ve been creating React components for little over two years (from the date of this post), in this time I&rsquo;m adamant we need to evolve this structure.
 For example:
-- dist - src - main - web - pages - containers - scripts - templates - styles - tests .">
+- dist - src - main - web - pages - containers - scripts - templates - styles - tests ...  What this achieves is a clear divide between client side functionality, templating and styles.">
 
 
 <meta itemprop="datePublished" content="2017-11-27T22:21:35&#43;00:00" />
 <meta itemprop="dateModified" content="2017-11-27T22:21:35&#43;00:00" />
-<meta itemprop="wordCount" content="1431">
+<meta itemprop="wordCount" content="1422">
 
 
 
 <meta itemprop="keywords" content="React,Ideal Directory Structure," />
 <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="React - Ideal Directory Structure"/>
-<meta name="twitter:description" content="Personally I find directory structures like the example below very frustrating when working with or working towards any modular front-end. Building React components for little over two years (from the date of this post) emphasises we need to evolve this structure into something practical when building/maintaining React components.
+<meta name="twitter:description" content="Directory structures like the example below are very frustrating when working with/towards any modular front-end codebase. I&rsquo;ve been creating React components for little over two years (from the date of this post), in this time I&rsquo;m adamant we need to evolve this structure.
 For example:
-- dist - src - main - web - pages - containers - scripts - templates - styles - tests ."/>
+- dist - src - main - web - pages - containers - scripts - templates - styles - tests ...  What this achieves is a clear divide between client side functionality, templating and styles."/>
 
       
     
@@ -139,7 +139,7 @@ For example:
         November 27, 2017
       </time>
       <section class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray">
-        <p>Personally I find directory structures like the example below very frustrating when working with or working towards any modular front-end. Building React components for little over two years <em>(from the date of this post)</em> emphasises we need to evolve this structure into something practical when building/maintaining React components.</p>
+        <p>Directory structures like the example below are very frustrating when working with/towards any modular front-end codebase. I&rsquo;ve been creating React components for little over two years <em>(from the date of this post)</em>, in this time I&rsquo;m adamant we need to evolve this structure.</p>
 
 <p>For example:</p>
 
@@ -156,17 +156,17 @@ For example:
     ...
 </code></pre>
 
-<p>The above example shows a clear divide between client side functionality, templating and styles. Traditionally, this makes sense, separating file types to maintain clean code and a clean codebase. The introduction of JSX and components break this, JavaScript and XML syntax to create template files.</p>
+<p>What this achieves is a clear divide between client side functionality, templating and styles. Traditionally, this is understandable, separating file types to maintain a clean codebase. The introduction of JSX completely changes this, a mixture of JavaScript and XML syntax to create components.</p>
 
-<p>At first glance a JSX may look alien, even contradictory, merging JavaScript and templating together. After a short time you probably wonder what you did without it. This is because the utilisation of JSX syntax to build web components makes sense.</p>
+<p>At first glance JSX may look convoluted, even contradictory, merging JavaScript and templating together. After a short amount of time you probably wonder what you ever did without it. This is because the utilisation of JSX to build web components makes sense.</p>
 
 <p>Why?</p>
 
-<p>Maintainability, speed of development &amp; familiarity. Searching and editing for one file is faster than two. JSX files are much smaller and readable than the native JavaScript equivalent.</p>
+<p>Maintainability, speed of development &amp; familiarity. Searching and editing one file is faster than two. JSX files are much smaller and readable than the native JavaScript equivalent.</p>
 
-<p>Additionally, all Front End developers will have experience with HTML and JavaScript, meaning there is no extra templating syntax to learn.</p>
+<p>Additionally, all Front End developers will have experience with JavaScript and HTML, meaning there is no extra templating syntax to learn.</p>
 
-<p>To summaries, JSX utilises what we already know and our familiar with.</p>
+<p>To summaries, JSX utilises what we already know.</p>
 
 <p>At this point, renaming the template folder to &ldquo;components&rdquo; makes sense, after all we&rsquo;re building components.</p>
 
@@ -305,7 +305,7 @@ For example:
 <p>&ldquo;Components are an interface chunk to be added to an overall layout. whereas patterns may be UI or a variety of other things, like a behavior, flow, application motif or something else.&rdquo; <a href="https://medium.com/eightshapes-llc/patterns-components-2ce778cbe4e8">Nathan Curtis - 2017</a></p>
 </blockquote>
 
-<p>Component are a singular piece of functionality that can be imported to improve functionality, UX or design. A pattern would be made up of multiple components e.g. a product card that would include an offer, image, short description, price and call to action component.</p>
+<p>A component is a singular piece of functionality that can be imported to improve UX, design or extend functionality. A pattern would be made up of multiple components e.g. a product card that would include an offer, image, short description, price and call to action component.</p>
 
 <p>Multiple patterns would then make up a page. You can think of this as a one-to-many relationship between components, patterns and pages.</p>
 
