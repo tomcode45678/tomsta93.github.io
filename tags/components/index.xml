@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Components on Thomas Stapleton</title>
+    <link>https://tomsta93.github.io/tags/components/</link>
+    <description>Recent content in Components on Thomas Stapleton</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 27 Nov 2017 22:21:35 +0000</lastBuildDate>
+    
+	<atom:link href="https://tomsta93.github.io/tags/components/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>React - Ideal Directory Structure</title>
+      <link>https://tomsta93.github.io/post/javascript/react/ideal-directory-structure/</link>
+      <pubDate>Mon, 27 Nov 2017 22:21:35 +0000</pubDate>
+      
+      <guid>https://tomsta93.github.io/post/javascript/react/ideal-directory-structure/</guid>
+      <description>Directory structures like the example below are very frustrating when working with or moving towards a modular front-end. As a front-end developer, I&amp;rsquo;ve been creating React components for little over two years (from the date of this post), in this time I&amp;rsquo;m adamant we need to evolve structures like this.
+Example of a traditional directory structure:
+- dist - src - main - web - pages - containers - scripts - templates - styles - tests .</description>
+    </item>
+    
+  </channel>
+</rss>
